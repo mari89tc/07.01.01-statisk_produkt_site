@@ -187,7 +187,6 @@ select {
 
 .soldOut {
   position: relative;
-  text-align: center;
   opacity: 80%;
 }
 .soldOutText {
