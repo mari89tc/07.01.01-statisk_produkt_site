@@ -20,14 +20,21 @@
     </header>
     <main>
       <h2>Products</h2>
-      <section class="grid_1">
-        <div>
-          <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Blue Nike t-shirt" />
-          <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-          <h4>Price</h4>
-          <p>895,-</p>
-          <p><a href="product.html">See product</a></p>
-        </div>
+      <template id="smallProductTemplate">
+        <section class="grid_1">
+          <article class="smallProduct">
+            <div>
+              <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="Blue Nike t-shirt" />
+              <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+              <h4>Price</h4>
+              <p>895,-</p>
+              <p><a href="product.html">See product</a></p>
+            </div>
+          </article>
+        </section>
+      </template>
+      <!-- 
+        <article class="smallProduct onSale">
         <div class="offer">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp" alt="Blue Nike t-shirt" />
           <div class="offerProcent">50%</div>
@@ -37,6 +44,8 @@
           <p class="offerPrice">Now 797,50,-</p>
           <p><a href="product.html">See product</a></p>
         </div>
+        </article>
+        <article class="smallProduct">
         <div>
           <img src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp" alt="Nike jersey" />
           <h3>Mean Team India Cricket Jersey</h3>
@@ -44,6 +53,8 @@
           <p>2495,-</p>
           <p><a href="product.html">See product</a></p>
         </div>
+        </article>
+        <article class="smallProduct">
         <div>
           <img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="Navy blue Backpack " />
           <h3>Deck Navy Blue Backpack</h3>
@@ -51,6 +62,8 @@
           <p>1299,-</p>
           <p><a href="product.html">See product</a></p>
         </div>
+        </article>
+        <article class="smallProduct">
         <div>
           <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="Black Backpack" />
           <h3>Big Cat Backpack Black</h3>
@@ -58,7 +71,9 @@
           <p>1299,-</p>
           <p><a href="product.html">See product</a></p>
         </div>
-        <div class="soldOut">
+        </article>
+        <article class="smallProduct soldOut">
+        <div>
           <img src="https://kea-alt-del.dk/t7/images/webp/640/1528.webp" alt="Black Fleece Jacket" />
           <div class="soldOutText">Sold Out</div>
           <h3>Black Fleece Jacket</h3>
@@ -66,8 +81,10 @@
           <p>3999,-</p>
           <p><a href="product.html">See product</a></p>
         </div>
-      </section>
+      </article>
+      -->
     </main>
     <script src="script.js"></script>
+    <script src="js/productlist.js"></script>
   </body>
 </html>
