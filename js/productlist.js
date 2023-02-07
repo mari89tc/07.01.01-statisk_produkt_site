@@ -1,6 +1,11 @@
-fetch("https://kea-alt-del.dk/t7/api/products?limit=15")
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?limit=15&category=" + category)
   .then((res) => res.json())
   .then(showProducts);
+
+document.querySelector("h2").textContent = category;
 
 function showProducts(products) {
   //looper og kalder showProduct
@@ -38,6 +43,7 @@ function showProduct(product) {
   //     copy.querySelector(".offerPrice").textContent = "Now " + newPrice + ",-";
   //     copy.querySelector(".price").classList.add("strikethrough");
   //   }
+
   //opdater selv med udskift af id
   copy.querySelector(".read-more").setAttribute("href", `product.html?id=${product.id}`);
 

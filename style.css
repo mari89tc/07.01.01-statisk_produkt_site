@@ -113,10 +113,26 @@ select {
   border-radius: 10px;
   width: 60px;
 }
-
+.productSite {
+  position: relative;
+}
 .offerPrice2 {
   font-size: 25px;
   color: #00b849;
+}
+.soldOut2 img {
+  opacity: 60%;
+}
+.soldOut2::before {
+  content: "Sold Out";
+  font-size: 70px;
+  color: #00b849;
+  font-weight: 500;
+  font-family: "Unbounded", sans-serif;
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  z-index: 30;
 }
 
 /* Category */

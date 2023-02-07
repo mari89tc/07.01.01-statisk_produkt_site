@@ -1,26 +1,25 @@
-//https://kea-alt-del.dk/t7/api/products/1165
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
-fetch("https://kea-alt-del.dk/t7/api/products/" + id)
+//https://kea-alt-del.dk/t7/api/categories
+// const urlParams = new URLSearchParams(window.location.search);
+// const category = urlParams.get("category");
+fetch("https://kea-alt-del.dk/t7/api/categories")
   .then((response) => response.json())
-  .then((data) => showProduct(data));
+  .then((data) => showCategories(data));
 
-function showProduct(product) {
-  console.log(product);
-  document.querySelector(".basket h3").textContent = product.productdisplayname;
-  document.querySelector(".basket .price").textContent = product.price + ",-";
-  document.querySelector(".basket .color").textContent = product.basecolour;
-  document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+function showCategories(categories) {
+  categories.forEach(showCategory);
+}
 
-  if (product.soldout) {
-    document.querySelector(".productSite").classList.add("soldOut2");
-  }
-
-  if (product.discount) {
-    let discountPrice = product.price - product.discount;
-    document.querySelector(".basket .offerPrice2").textContent = "Now " + discountPrice + " ,-";
-    document.querySelector(".price").classList.add("strikethrough");
-  }
+function showCategory(product) {
+  //console.log(product);
+  // fang template
+  const template = document.querySelector(".categoriesTemplate").content;
+  //Lav en kopi
+  const copy = template.cloneNode(true);
+  //ændre indhold
+  copy.querySelector("a").textContent = product.category;
+  copy.querySelector("a").href = `productlist.html?category=${product.category}`;
+  document.querySelector("main ul").appendChild(copy);
+  //copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.category.id}.webp`;
 }
 
 /*
