@@ -10,8 +10,13 @@ function showProduct(product) {
   document.querySelector(".basket h3").textContent = product.productdisplayname;
   document.querySelector(".basket .price").textContent = product.price + ",-";
   document.querySelector(".basket .color").textContent = product.basecolour;
-
   document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+
+  if (product.discount) {
+    let discountPrice = product.price - product.discount;
+    document.querySelector(".basket .offerPrice2").textContent = "Now " + discountPrice + " ,-";
+    document.querySelector(".price").classList.add("strikethrough");
+  }
 }
 
 /*
