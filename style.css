@@ -155,7 +155,7 @@ select {
   color: black;
   font-weight: 500;
 }
-.grid_1 p {
+.grid_1 {
   font-size: 15px;
   color: black;
   font-weight: 400;
@@ -166,7 +166,7 @@ select {
   color: black;
 }
 .smallProduct .offerPrice {
-  display: none;
+  /* display: none; */
 }
 .smallProduct {
   position: relative;
@@ -188,11 +188,14 @@ select {
 }
 
 .offerPrice {
-  display: block;
   font-size: 15px;
   color: #00b849;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
+}
+
+.strikethrough {
+  text-decoration: line-through;
 }
 
 .soldOut img {
