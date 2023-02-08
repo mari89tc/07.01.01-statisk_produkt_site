@@ -17,7 +17,6 @@ function showCategory(product) {
   clone.querySelector("a").href = `productlist.html?category=${product.category}`;
   //appender
   document.querySelector("main ul").appendChild(clone);
-  //copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.category.id}.webp`;
 }
 
 /*
